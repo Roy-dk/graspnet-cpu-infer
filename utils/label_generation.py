@@ -11,7 +11,12 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 sys.path.append(ROOT_DIR)
 sys.path.append(os.path.join(ROOT_DIR, 'knn'))
 
-from knn_modules import knn
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(current_dir, '..')))
+
+
+from knn.knn_modules import knn
 from loss_utils import GRASP_MAX_WIDTH, batch_viewpoint_params_to_matrix,\
                        transform_point_cloud, generate_grasp_views
 

@@ -4,13 +4,8 @@
 // LICENSE file in the root directory of this source tree.
 
 #pragma once
-#include <ATen/cuda/CUDAContext.h>
 #include <torch/extension.h>
 
-#define CHECK_CUDA(x)                                          \
-  do {                                                         \
-    TORCH_CHECK(x.type().is_cuda(), #x " must be a CUDA tensor"); \
-  } while (0)
 
 #define CHECK_CONTIGUOUS(x)                                         \
   do {                                                              \

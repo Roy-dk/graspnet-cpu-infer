@@ -5,6 +5,7 @@
 
 from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+from torch.utils.cpp_extension import CppExtension
 import glob
 import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -18,12 +19,11 @@ _ext_headers = glob.glob("{}/include/*".format(_ext_src_root))
 setup(
     name='pointnet2',
     ext_modules=[
-        CUDAExtension(
+        CppExtension(
             name='pointnet2._ext',
             sources=_ext_sources,
             extra_compile_args={
-                "cxx": ["-O2", "-I{}".format("{}/{}/include".format(ROOT, _ext_src_root))],
-                "nvcc": ["-O2", "-I{}".format("{}/{}/include".format(ROOT, _ext_src_root))],
+                "cxx": ["-O2", "-I{}".format("{}/{}/include".format(ROOT, _ext_src_root))], 
             },
         )
     ],

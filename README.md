@@ -1,4 +1,16 @@
+# 注意
+原仓库纪念没更新了，Fork 过来的，自己简单进行了一些处理（见 git 记录），方便在 cpu 上进行推理( 实际是想跑在边缘设备 rk3588 开发板上 )，并且支持了下最新版本 pytorch，checkpoint 也偷懒直接上传了。
+
+（改的比较草率但是没用 cuda 能跑，自己测试用）
+
+感谢原作者开源供学习。
+
 # GraspNet Baseline
+
+
+
+启动：`python3 demo.py --checkpoint_path ./checkpoint-rs.tar`
+
 Baseline model for "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping" (CVPR 2020).
 
 [[paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_GraspNet-1Billion_A_Large-Scale_Benchmark_for_General_Object_Grasping_CVPR_2020_paper.pdf)]
