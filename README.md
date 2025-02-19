@@ -1,15 +1,15 @@
 # 注意
-原仓库纪念没更新了，Fork 过来的，自己简单进行了一些处理（见 git 记录），方便在 cpu 上进行推理( 实际是想跑在边缘设备 rk3588 开发板上 )，并且支持了下最新版本 pytorch，checkpoint 也偷懒直接上传了。
+原仓库纪念没更新了，Fork 过来的（为了能被搜索到删除了关联），自己简单进行了一些处理（见 git 记录），方便在 cpu 上进行推理( 实际是想跑在边缘设备 rk3588 开发板上 )，并且支持了下最新版本 pytorch，checkpoint 也偷懒直接上传了。
 
 （改的比较草率但是没用 cuda 能跑，自己测试用）
 
 感谢原作者开源供学习。
 
+
+按照原仓库的步骤编译，跳过 `pointnet2` 的安装，然后启动：`python3 demo.py --checkpoint_path ./checkpoint-rs.tar` 就可以推理了。
+
+
 # GraspNet Baseline
-
-
-
-启动：`python3 demo.py --checkpoint_path ./checkpoint-rs.tar`
 
 Baseline model for "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping" (CVPR 2020).
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 Compile and install pointnet2 operators (code adapted from [votenet](https://github.com/facebookresearch/votenet)).
 ```bash
 cd pointnet2
-python setup.py install
+python setup.py install        # 原仓库需要，这部分代码修改过，不用安装 pointnet2，直接跳过即可
 ```
 Compile and install knn operator (code adapted from [pytorch_knn_cuda](https://github.com/chrischoy/pytorch_knn_cuda)).
 ```bash
