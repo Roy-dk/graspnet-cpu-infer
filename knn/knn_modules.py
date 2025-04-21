@@ -1,11 +1,6 @@
-import unittest
-import gc
-import operator as op
-import functools
-import torch
-from torch.autograd import Variable, Function
+import torch 
 from knn_pytorch import knn_pytorch
-# import knn_pytorch
+
 def knn(ref, query, k=1):
   """ Compute k nearest neighbors for each query point.
   """

@@ -6,7 +6,7 @@
 感谢原作者开源供学习。
 
 
-按照原仓库的步骤编译，跳过 `pointnet2` 的安装，然后启动：`python3 demo.py --checkpoint_path ./checkpoint-rs.tar` 就可以推理了。
+按照原仓库的步骤编译，然后启动：`python3 demo.py --checkpoint_path ./checkpoint-rs.tar` 就可以推理了。
 
 
 # GraspNet Baseline
